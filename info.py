@@ -11,8 +11,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'AkingBot')
-API_ID = int(environ.get('API_ID', ' 24108883'))
-API_HASH = environ.get('API_HASH', '4ab873c28c27a4bc685e46bca9190b48')
+API_ID = int(environ.get('API_ID', '20221130'))
+API_HASH = environ.get('API_HASH', '5d98fbab7e24345a92dc487cc02e3948')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
@@ -26,7 +26,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ' -1002456597671'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002394604217'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002423999133').split()]  # For Multiple Id Use One Space Between Each.
